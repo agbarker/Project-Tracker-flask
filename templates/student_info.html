@@ -5,7 +5,40 @@
 </head>
 <body>
   <h1>{{ first }} {{ last }}</h1>
-
   <p>GitHub Account: {{ github }}</p>
+
+  {% for project in grades%}
+  	<!-- <li title=project[0]> -->
+
+  	<ul>
+  		<li>Title: {{ project.0 }}<a href="/project?title={{project.0}}">Go to project information</a></li>
+	  	<li>Grade: {{ project.1 }}</li>
+	</ul>
+
+  
+  {% endfor %}
+<!-- for tuple in list:
+	project name = tuple[0]
+	project grade = tuple[1]
+
+	display project name and grade in html bullet
+
+	for project in grades:
+		title = project[0]
+		grade = project[1]
+		print title, grade
+
+	end for loop
+--> 
+<!-- 
+  	title: {project[0]} 
+  	grade: {project[1]} -->
+
+
+<!--   	<p>Your student's info: 
+  	<a href="/student?github={{github}}">Go to student information</a></p> -->
+
+
+
 </body>
 </html>

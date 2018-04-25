@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Project Info</title>
+</head>
+<body>
+  
+  <h1>{{title}}</h1>
+  	<!-- <li title=project[0]> -->
+
+  {% for attrib in project%}
+
+
+
+  	<ul>
+      <li>Student: {{ attrib.0 }}</li>
+	  	<li>Grade: {{ attrib.1 }}</li>
+	</ul>
+
+    {% endfor %}
+
+
+</body>
+</html>
